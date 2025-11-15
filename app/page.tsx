@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { Phone, MessageCircle, Mail, Globe, Linkedin, Download, Calendar, CheckCircle } from 'lucide-react';
 
 export default function MohamedToureProfile() {
-  const [hoveredButton, setHoveredButton] = useState(null);
+  // Fix TypeScript : Spécifier le type pour éviter l'erreur d'assignation string -> null
+  const [hoveredButton, setHoveredButton] = useState<string | null>(null);
 
   const downloadVCard = () => {
     const vcard = `BEGIN:VCARD
